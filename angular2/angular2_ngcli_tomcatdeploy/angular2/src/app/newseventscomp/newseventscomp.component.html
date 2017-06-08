@@ -1,0 +1,24 @@
+<br/>
+<div class="container">
+  <div class="row" style='margin:0; padding:0;' [ngStyle]="{'background-color': myPosition =='left' ? 'royalblue' : 'lightgreen' }"> 
+    <div class="col-md-8 col-lg-8" [ngClass]="myPosition =='left' ? 'pull-left' : 'pull-right'">
+      <!-- artigo em destaque -->
+      <div class="featured-article">
+        <a href="#">
+					<img src="{{newsorevents.image}}"  width="750" height="400" alt="" class="thumb">
+				</a>
+      </div>
+      <!-- /.featured-article -->
+    </div>
+    <div class="col-md-4 col-lg-4">
+      <h2>{{newsorevents.title}}</h2>
+      <ul class="media-list main-list">
+        <li class="media" *ngFor="let ne of newsorevents.newsevents">
+          <div class="media-body">
+            <h4 class="media-heading">{{ne.title}}</h4>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

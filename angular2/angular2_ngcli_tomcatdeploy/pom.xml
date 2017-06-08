@@ -1,0 +1,118 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>it.cits.ciscoworkforcecontentservices.scplatform</groupId>
+	<artifactId>dce</artifactId>
+	<packaging>war</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>dce Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+
+	<!-- PROPERTIES -->
+	<properties>
+		<tomcat.url>http://localhost:8181/manager/text</tomcat.url>
+	</properties>
+
+	<!-- DEPENDENCIES -->
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<!-- BUILD -->
+	<build>
+		<finalName>${project.artifactId}</finalName>
+	<plugins>
+		<plugin>
+			<groupId>com.github.eirslett</groupId>
+			<artifactId>frontend-maven-plugin</artifactId>
+			<version>1.0</version>
+			<configuration>
+				<workingDirectory>angular2</workingDirectory>
+				<installDirectory>temp</installDirectory>
+			</configuration>
+			<executions>
+				<!-- It will install nodejs and npm -->
+				<execution>
+					<id>install node and npm</id>
+					<goals>
+						<goal>install-node-and-npm</goal>
+					</goals>
+					<configuration>
+						<nodeVersion>v7.10.0</nodeVersion>
+						<npmVersion>4.2.0</npmVersion>
+					</configuration>
+				</execution>
+
+				<!-- It will execute command "npm install" inside "/angular" directory -->
+				<execution>
+					<id>npm install</id>
+					<goals>
+						<goal>npm</goal>
+					</goals>
+					<configuration>
+						<arguments>install</arguments>
+					</configuration>
+				</execution>
+
+				<!-- It will execute command "npm build" inside "/angular" directory 
+					to clean and create "/dist" directory -->
+				<execution>
+					<id>npm build</id>
+					<goals>
+						<goal>npm</goal>
+					</goals>
+					<configuration>
+						<arguments>run build</arguments>
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>
+		<plugin>
+			<artifactId>maven-war-plugin</artifactId>
+			<version>2.1.1</version>
+			<configuration>
+				<!-- <outputDirectory>${project.build.directory}/../package/dependencies/jbossews/webapps</outputDirectory> -->
+				<warName>${project.artifactId}</warName>
+			</configuration>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.tomcat.maven</groupId>
+			<artifactId>tomcat7-maven-plugin</artifactId>
+			<version>2.2</version>
+			<configuration>
+				<url>${tomcat.url}</url>
+				<server>tomcat-server</server>
+			</configuration>
+		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-resources-plugin</artifactId>
+			<version>2.4.2</version>
+			<executions>
+				<execution>
+					<id>default-copy-resources</id>
+					<phase>process-resources</phase>
+					<goals>
+						<goal>copy-resources</goal>
+					</goals>
+					<configuration>
+						<overwrite>true</overwrite>
+						<outputDirectory>${project.build.directory}/${project.artifactId}/</outputDirectory>
+						<resources>
+							<resource>
+								<directory>${project.basedir}/angular2/dist</directory>
+							</resource>
+						</resources>
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>
+	</plugins>
+	</build>
+
+</project>
