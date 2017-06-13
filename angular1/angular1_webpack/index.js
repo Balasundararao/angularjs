@@ -2,9 +2,9 @@ console.log('Loading the Index.js file');
 var angular = require('angular');
 var app = angular.module('myApp', ['ngRoute']);
 
-require('./homepage');
-require('./briefcasepage');
-require('./hubspage');
+require('./homepage')(app);
+require('./briefcasepage')(app);
+require('./hubspage')(app);
 
 
 app.config(['$locationProvider','$routeProvider', function ($locationProvider,$routeProvider) {

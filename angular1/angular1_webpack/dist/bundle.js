@@ -33489,9 +33489,9 @@ console.log('Loading the Index.js file');
 var angular = __webpack_require__(0);
 var app = angular.module('myApp', ['ngRoute']);
 
-__webpack_require__(2);
-__webpack_require__(1);
-__webpack_require__(3);
+__webpack_require__(2)(app);
+__webpack_require__(1)(app);
+__webpack_require__(3)(app);
 
 app.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
   $locationProvider.html5Mode(false);
