@@ -33495,8 +33495,8 @@ __webpack_require__(3)(app);
 
 app.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
   $locationProvider.html5Mode(false);
-  $routeProvider.when('/', { templateUrl: 'views/home.html', controller: 'HomeCtrl' });
-  $routeProvider.when('/briefcase', { templateUrl: 'views/briefcase.html', controller: 'BriefcaseCtrl' });
+  $routeProvider.when('/', { templateUrl: '/content/r/dce_sitearea/index/homepage.html', controller: 'HomeCtrl' });
+  $routeProvider.when('/briefcase', { templateUrl: '/content/r/dce_sitearea/index/briefcasepage.html', controller: 'BriefcaseCtrl' });
   $routeProvider.when('/hubs/:hubsname/:catname/:pagename*', {
     templateUrl: function (urlattr) {
       return '/c/r/salesconnect/saleshubs/' + urlattr.hubsname + urlattr.catname + urlattr.pagename + '.html';

@@ -1,0 +1,30 @@
+import kitten from './img/kitten.jpg';
+import elephant from './img/elephant.jpg';
+import htmlContent1 from 'html-loader!./html/test1.html';
+import htmlContent2 from 'html-loader!./html/test2.html';
+// import cisco from '/c/en/us/index.html';
+
+import txt from 'raw-loader!./txt/test1.txt';
+
+var app = document.getElementById('test');
+app.innerHTML = `
+	<div id="menu">
+		<button id="loadPage1">Load Page 1</button>
+		<button id="loadPage2">Load Page 2</button>
+	</div>
+	<div id="content">
+		<p>
+			<h1>Home</h1>
+			<img src="${kitten}"/><br><br/>
+            			<img src="${elephant}"/><br>
+
+		</p>
+        <p> ${txt} </p>
+		<p>${htmlContent1}</p>
+				<p>${htmlContent2}</p>
+
+	</div>
+`;
+
+console.log( 'File is loadedd' + 'Main File' );
+
