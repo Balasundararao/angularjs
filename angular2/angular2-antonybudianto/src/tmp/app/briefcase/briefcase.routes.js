@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var briefcase_component_1 = require("./briefcase.component");
+exports.BriefcaseRoutes = [
+    { path: 'briefcase', component: briefcase_component_1.BriefcaseComponent }
+];
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9icmllZmNhc2UvYnJpZWZjYXNlLnJvdXRlcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUVBLDZEQUEyRDtBQUU5QyxRQUFBLGVBQWUsR0FBVztJQUNyQyxFQUFFLElBQUksRUFBRSxXQUFXLEVBQUcsU0FBUyxFQUFFLHdDQUFrQixFQUFFO0NBQ3RELENBQUMiLCJmaWxlIjoiYXBwL2JyaWVmY2FzZS9icmllZmNhc2Uucm91dGVzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgUm91dGVzIH0gZnJvbSAnQGFuZ3VsYXIvcm91dGVyJztcblxuaW1wb3J0IHsgQnJpZWZjYXNlQ29tcG9uZW50IH0gZnJvbSAnLi9icmllZmNhc2UuY29tcG9uZW50JztcblxuZXhwb3J0IGNvbnN0IEJyaWVmY2FzZVJvdXRlczogUm91dGVzID0gW1xuICB7IHBhdGg6ICdicmllZmNhc2UnLCAgY29tcG9uZW50OiBCcmllZmNhc2VDb21wb25lbnQgfVxuXTtcbiJdfQ==
