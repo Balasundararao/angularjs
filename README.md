@@ -4,3 +4,8 @@ https://blog.thoughtram.io/angular/2016/06/08/component-relative-paths-in-angula
 Rightn now commonsjs and systemjs folders are same. need to figure out it.
 
 https://github.com/buckyroberts/angular-2-template/blob/master/index.html
+
+
+
+
+http://plnkr.co/edit/NzQ1skgIrliMIGgEPkp8
