@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Angular2 App</title>
+    <base href="/">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/2.2.0/es5-shim.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="//www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/cisco-sans.min.css" type="text/css" media="screen, print">
+     <script type="text/javascript" src="//www.cisco.com/etc/designs/cdc/clientlibs/responsive/js/foundation.min.js"></script>
+    <!--[if (IEMobile 7) | (lt IE 9)]>
+    <link rel="stylesheet" href="/etc/designs/cdc/clientlibs/responsive/css/homepage-ie.min.css" type="text/css" media="screen, print">
+    <![endif]-->
+    <!--[if (!IE) | (gt IE 8)]><!-->
+    <link rel="stylesheet" href="//www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/homepage.min.css" type="text/css" media="screen, print">
+    <link rel="stylesheet" href="http://www.cisco.com/etc/designs/cdc/clientlibs/responsive/css/responsive.min.css" type="text/css" media="screen, print">
+    <!--<![endif]-->
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+  
+    
+    <link rel="stylesheet" href="//www.cisco.com/etc/designs/cdc/dmr/bundles/dmr.min.css">
+    <link rel="stylesheet" href="//www.cisco.com/etc/designs/cdc/dmr/blade/clientLib.min.css" type="text/css">
+    <!--<link rel="stylesheet" href="//www.cisco.com/etc/designs/cdc/dmr/homepage/dmc-home-ad.css" type="text/css">
+    <link rel="stylesheet" href="/c/dam/assets/dmr/bundles/atlantic/overrides.css" type="text/css">-->
+
+</head>
+<body id="wcq" class="fw-res cdc-homepage ">
+    
+    <as-main-app>
+      <i class="center-fix main-spinner fa fa-spin fa-spinner"></i>
+    </as-main-app>
+
+    <!-- build:js assets/lib.js -->
+
+
+
+
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim.js/2.9.9/Slim.min.js"></script>
+    <script src="https://unpkg.com/reflect-metadata@0.1.10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zone.js/0.8.12/zone.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.14/system.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/2.4.0/typescript.min.js"></script>
+    <script src="systemjs.conf.js"></script>
+
+    <script>
+      System.import('app/main')
+        .catch(function(err) { console.error(err); });
+    </script>
+    <!-- endbuild -->
+  </body>
+</html>
