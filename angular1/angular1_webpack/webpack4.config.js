@@ -5,7 +5,7 @@ const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 // exports...
 module.exports = (env, argv) => {
@@ -27,17 +27,23 @@ module.exports = (env, argv) => {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ["style-loader", "css-loader"],
       },
       // {
       //   test: /\.css$/,
       //   exclude: /node_modules/,
       //   use: [MiniCssExtractPlugin.loader, 'style-loader', "css-loader"],
       // },
-      {test: /\.scss$/, use: ExtractTextPlugin.extract({fallback: 'style-loader',use: ['style-loader', 'css-loader', 'sass-loader']})},
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: ["style-loader", "css-loader", "sass-loader"],
+        }),
+      },
       {
         test: /\.less$/,
-        use: ["style-loader", "css-loader", "less-loader"]
+        use: ["style-loader", "css-loader", "less-loader"],
       },
       { test: /\.html$/, use: "raw-loader" },
       {
@@ -139,6 +145,9 @@ module.exports = (env, argv) => {
     module: _module,
     plugins,
     optimization,
+    externals: {
+      jquery: "jQuery", //jquery is external and available at the global variable jQuery
+    },
   };
 };
 // resolve,
